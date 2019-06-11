@@ -1,0 +1,43 @@
+.left-side{
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.large-icon-size{
+    height: 120px;
+}
+
+.table th, .table td{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.image-style{
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
+
+.temperature{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+}
+.city{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+.time{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 30px;
+}
