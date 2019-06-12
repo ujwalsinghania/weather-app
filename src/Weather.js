@@ -7,11 +7,11 @@ import {Hourly} from './Hourly'
 
 class Weather extends React.Component{
     render() {
-        console.log(this.props.currentData);
+        console.log("image " + this.props.currentData.image_link);
         return (
             <Container style={{padding: '20px'}}>
                 <Row>
-                    <Container style={{'boxShadow': '2px 2px 10px lightgray', maxWidth: '900px'}}>
+                    <Container className={"card-container"}>
                         <Row>
                             <Col lg={4} className={"left-side"}>
                                 <Row>
@@ -40,8 +40,8 @@ class Weather extends React.Component{
 
                             <Col lg={8} className={"p-0"}>
                                 <Container style={{height: '100%', padding: 0}}>
-                                    <div style={{position: 'relative', height: '100%'}}>
-                                        <img src={"defualt.jpg"} className="image-style"/>
+                                    <div style={{position: 'relative', height: '100%', maxHeight: '500px'}}>
+                                        <img src={this.props.currentData.image_link == undefined ? 'defualt.jpg' : this.props.currentData.image_link} className="image-style"/>
                                         <div className={"temperature"}>
                                             <span>{this.props.currentData.temperature}<sup>o</sup></span>
                                         </div>

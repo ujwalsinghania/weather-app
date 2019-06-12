@@ -1,3 +1,9 @@
+.card-container{
+    box-shadow: 2px 2px 10px lightgray ;
+    max-width: 900px;
+    max-height: 500px;
+}
+
 .left-side{
     align-items: center;
     flex-direction: column;
@@ -40,4 +46,10 @@ width: 100%;
     left: 30px;
     color: white;
     font-size: 30px;
+}
+
+.input-style{
+    border: none;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
 }

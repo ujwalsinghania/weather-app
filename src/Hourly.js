@@ -9,10 +9,6 @@ export function Hourly(props) {
         <Container className={"mt-2"}>
             <Table className={'table-borderless'}>
                 <tbody>
-                <tr className={"m-0 p-0"}>
-                    <th>Now</th>
-                    <th><img src={"weather-icons/179.png"} style={{height: '40px'}}/>{}</th>
-                </tr>
                 <tr>
                     <th>9:00 a.m</th>
                     <th><img src={"weather-icons/179.png"} style={{height: '40px'}}/>65</th>
