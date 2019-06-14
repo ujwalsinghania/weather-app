@@ -26,12 +26,12 @@ class Weather extends React.Component{
                                 </Row>
                                 <Row>
                                     <Col lg={12}>
-                                        <Tabs defaultActiveKey="Today" style={{'justify-content': 'center'}}>
+                                        <Tabs defaultActiveKey="Week" style={{'justify-content': 'center'}}>
                                             <Tab eventKey="Today" title="Today">
                                                 <Hourly/>
                                             </Tab>
                                             <Tab eventKey="Week" title="Week">
-                                                <Weekly/>
+                                                <Weekly forecast={this.props.forecast} />
                                             </Tab>
                                         </Tabs>
                                     </Col>

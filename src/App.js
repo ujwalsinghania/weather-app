@@ -19,9 +19,7 @@ class  App extends Component {
             time: undefined,
             icon: undefined
         },
-        forecast: {
-
-        }
+        forecast: []
 };
 
     handleCity = (userInput) => {
@@ -29,7 +27,6 @@ class  App extends Component {
             `https://api.unsplash.com/search/photos/?page=1&per_page=5&query=${userInput}&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`
         )
             .then(data => {
-                console.log(data);
                 for(let i=0;i<data.data.results.length;i++){
                     this.setState({
                         img_links: [...this.state.img_links, data.data.results[i].urls.small]
@@ -63,14 +60,17 @@ class  App extends Component {
 
         axios.get(`http://api.apixu.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${userInput}&days=7`
             ).then(forecastData=>{
-                console.log(forecastData);
+                forecastData.data.forecast.forecastday.shift();
+                this.setState({
+                    forecast: forecastData.data.forecast.forecastday
+                });
         })
     };
 
     render() {
         return (
                 <div className="App">
-                    <Weather currentData={this.state.currentData} />
+                    <Weather currentData={this.state.currentData} forecast={this.state.forecast}/>
                     <City city={this.handleCity}/>
                 </div>
             );
