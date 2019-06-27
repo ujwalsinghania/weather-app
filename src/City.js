@@ -22,9 +22,11 @@ class City extends Component{
     render() {
        return (
            <Container>
-               <form onSubmit={this.sendCity} className={"form-inline"}>
-                   <input type={"text"} name={"city"} onChange={this.handleChange} placeholder={"Enter a City"}/><br />
-                   <input type="submit" className={"btn btn-primary btn-block"}/>
+               <form onSubmit={this.sendCity} className={"input-group"}>
+                   <input type="text" className="form-control" placeholder="Search" onChange={this.handleChange} />
+                   <div className="input-group-append">
+                       <button className="btn btn-secondary" type="submit">Submit City</button>
+                   </div>
                </form>
            </Container>
        )

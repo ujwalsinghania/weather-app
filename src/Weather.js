@@ -7,7 +7,6 @@ import {Hourly} from './Hourly'
 
 class Weather extends React.Component{
     render() {
-        console.log("image " + this.props.currentData.image_link);
         return (
             <Container style={{padding: '20px'}}>
                 <Row>
@@ -53,7 +52,6 @@ class Weather extends React.Component{
                                         <div className={"time"}>
                                             <span>{this.props.currentData.time}</span>
                                         </div>
-
                                     </div>
                                 </Container>
                             </Col>
