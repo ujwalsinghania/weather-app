@@ -10,7 +10,7 @@ export function Weekly(props) {
         return(
         <tr>
             <th>{days[new Date(day.date).getDay()]}</th>
-            <th><img src={"weather-icons/179.png"} style={{height: '40px'}}/>{<span>{day.day.avgtemp_c}<sup>o</sup></span>}</th>
+            <th><img src={"weather-icons/179.png"} style={{height: '40px'}}/>{<span>&ensp;{day.day.avgtemp_c}<sup>o</sup></span>}</th>
             <hr />
         </tr>
         )

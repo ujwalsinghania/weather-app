@@ -23,7 +23,7 @@ class City extends Component{
        return (
            <Container>
                <form onSubmit={this.sendCity} className={"form-inline"}>
-                   <input type={"text"} name={"city"} onChange={this.handleChange} className={"input-style"} placeholder={"Enter a City"}/><br />
+                   <input type={"text"} name={"city"} onChange={this.handleChange} placeholder={"Enter a City"}/><br />
                    <input type="submit" className={"btn btn-primary btn-block"}/>
                </form>
            </Container>
