@@ -21,7 +21,7 @@ class City extends Component{
 
     render() {
        return (
-           <Container>
+           <Container style={{"margin-top":"20px"}}>
                <form onSubmit={this.sendCity}>
                    <input type={"text"} name={"city"} onChange={this.handleChange} className={"input-style"} placeholder={"Enter a City"}/>
                    <input type="submit" className={"btn btn-primary"}/>
