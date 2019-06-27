@@ -65,15 +65,6 @@ class Weather extends React.Component{
     }
 }
 
-Weather.defaultProps = {
-    weatherData : {
-        data : {
-            current: {
-                cloud : 20
-            }
-        }
-    }
-};
 
 export default Weather
 

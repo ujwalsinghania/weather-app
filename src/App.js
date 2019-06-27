@@ -3,7 +3,7 @@ import './App.css';
 import Weather from './Weather'
 import City from './City'
 import axios from 'axios';
-import Unsplash from 'unsplash-js';
+
 
 
 class  App extends Component {
@@ -70,8 +70,8 @@ class  App extends Component {
     render() {
         return (
                 <div className="App">
-                    <Weather currentData={this.state.currentData} forecast={this.state.forecast}/>
                     <City city={this.handleCity}/>
+                    <Weather currentData={this.state.currentData} forecast={this.state.forecast}/>
                 </div>
             );
         }
